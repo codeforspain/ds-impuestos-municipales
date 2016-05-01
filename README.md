@@ -6,11 +6,11 @@ Histórico de tipos impositivos municipales desde 2000 hasta la fecha. Incluye t
 
 
 
-    IBI	  		Impuesto sobre Bienes Inmuebles
-    IAE    		Impuesto sobre Actividades Económicas
-    IVTM   		Impuesto Vehículos Tracción Mecánica
-    IIVTNU  	Impuesto sobre el Incremento del Valor de los Terrenos de Naturaleza Urbana
-  	ICIO		Impuesto sobre Construcciones, Instalaciones y Obras      
+    IBI	        Impuesto sobre Bienes Inmuebles
+    IAE    	    Impuesto sobre Actividades Económicas
+    IVTM        Impuesto Vehículos Tracción Mecánica
+    IIVTNU      Impuesto sobre el Incremento del Valor de los Terrenos de Naturaleza Urbana
+    ICIO        Impuesto sobre Construcciones, Instalaciones y Obras      
 
 
 Este dataset es parte del proyecto abierto y colaborativo CodeForSpain. Puedes obtener más información en:
@@ -35,7 +35,59 @@ Se completa a lo largo del primer semestre del año en curso, por lo que **el ú
 ### Formato de los datos
 
 
-Incluye un número elevado de campos.
+Incluye los siguientes campos:
+
+
+| Field Name                  | Order | Type (Format) | Description                                                       |
+|-----------------------------|-------|---------------|-------------------------------------------------------------------| 
+| municipio_id                | 1     | number        | Código INE del municipio                                          |
+| year                        | 2     | number        | Año del dato                                                      |
+| codigo                      | 3     | string        | Código INE (autonomia-provincia-municipio)                        |
+| ayuntamiento                | 4     | string        | Denominación oficial del municipio                                |
+| poblacion                   | 5     | number        | Número de habitantes                                              |
+| ibi_urbana                  | 6     | number        | Tipo para el cálculo del IBI en urbana                            |
+| ibi_coef_actualizacion      | 7     | number        | Coeficiente multiplicador para el cálculo del valor catastral     |
+| ibi_rev_catastral           | 8     | number        | Año de la última ponencia de valores catastrales               s   |
+| ibi_rustica                 | 9     | number        | Tipo para el cálculo del IBI en rústica                           |
+| ibi_especial                | 10    | number        | Tipo para el cálculo del IBI en rústica                           |
+| iae_coef_max                | 11    | number        |                                                                   |
+| iae_coef_min                | 12    | number        |                                                                   |
+| ivtm_0_8                    | 13    | number        | IVTM - Turismos de menos de 8 CV                                  |
+| ivtm_8_12                   | 14    | number        | IVTM - Turismos de 8 a 11,99 CV                                   |
+| ivtm_12_16                  | 15    | number        | IVTM - Turismos de 12 a 15,99 CV                                  |
+| ivtm_16_20                  | 16    | number        | IVTM - Turismos de 16 a 19,99 CV                                  |
+| ivtm_20_inf                 | 17    | number        | IVTM - Turismos de 20 CV o más                                    |
+| ivtm_aut_0_21               | 18    | number        | IVTM - Autobuses de menos de 21 plazas                            |
+| ivtm_aut_21_50              | 19    | number        | IVTM - Autobuses de 21 a 50 plazas                                |
+| ivtm_aut_50_inf             | 20    | number        | IVTM - Autobuses de mas de 50 plazas                              |
+| ivtm_cam_0_1000             | 21    | number        | IVTM - Camiones de menos de 1000 Kg de carga útil                 |
+| ivtm_cam_1000_3000          | 22    | number        | IVTM - Camiones de 1000 a 2999 Kg de carga útil                   |
+| ivtm_cam_3000_10000         | 23    | number        | IVTM - Camiones de 3000 a 9999 Kg de carga útil                   |
+| ivtm_cam_10000_inf          | 24    | number        | IVTM - Camiones de mas de 9999 Kg de carga útil                   |
+| ivtm_tra_0_16               | 25    | number        | IVTM - Tractores de menos de 16 CV                                |
+| ivtm_tra_16_25              | 26    | number        | IVTM - Tractores de 16 a 25 CV                                    |
+| ivtm_tra_25_inf             | 27    | number        | IVTM - Tractores de mas de 25 CV                                  |
+| ivtm_rem_750_1000           | 28    | number        | IVTM - Remolques de 750 a 1000 Kg de carga útil                   |
+| ivtm_rem_1000_3000          | 29    | number        | IVTM - Remolques de 1000 a 2999 Kg de carga útil                  |
+| ivtm_rem_3000_inf           | 30    | number        | IVTM - Remolques de mas de 2999 Kg de carga útil                  |
+| ivtm_ciclomotor             | 31    | number        | IVTM - Ciclomotores                                               |
+| ivtm_moto_0_125             | 32    | number        | IVTM - Motocicletas hasta 125 cc                                  |
+| ivtm_moto_125_250           | 33    | number        | IVTM - Motocicletas de más de 125 hasta 250 cc                    |
+| ivtm_moto_250_500           | 34    | number        | IVTM - Motocicletas de más de 250 hasta 500 cc                    |
+| ivtm_moto_500_1000          | 35    | number        | IVTM - Motocicletas de más de 500 hasta 1000 cc                   |
+| ivtm_moto_1000_inf          | 36    | number        | IVTM - Motocicletas de más de 1000 cc                             |
+| iivtnu_porcentaje_5         | 37    | number        | IIVTNU - Porcentaje de incremento hasta 5 años                    |
+| iivtnu_tipo_5               | 38    | number        | IIVTNU - Tipo de gravamen hasta 5 años                            |
+| iivtnu_porcentaje_10        | 39    | number        | IIVTNU - Porcentaje de incremento hasta 10 años                   |
+| iivtnu_tipo_10              | 40    | number        | IIVTNU - Tipo de gravamen hasta 10 años                           |
+| iivtnu_porcentaje_15        | 41    | number        | IIVTNU - Porcentaje de incremento hasta 15 años                   |
+| iivtnu_tipo_15              | 42    | number        | IIVTNU - Tipo de gravamen hasta 15 años                           |
+| iivtnu_porcentaje_20        | 43    | number        | IIVTNU - Porcentaje de incremento hasta 20 años                   |
+| iivtnu_tipo_20              | 44    | number        | IIVTNU - Tipo de gravamen hasta 20 años                           |
+| iivtnu_porcentaje_reduccion | 45    | number        | IIVTNU - Porcentaje de reducción  (Art. 107.3 RDL 2/2004)         | 
+| icio_tipo_gravamen          | 46    | number        | ICIO - Tipo de gravamen                                           | 
+| fecha_de_alta               | 47    | string        | Fecha en la que se comunica el dato (YYYY-MM-DD)                  | 
+
 
 
 Ejemplo en CSV:
