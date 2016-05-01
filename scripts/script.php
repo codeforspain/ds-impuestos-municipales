@@ -20,7 +20,7 @@ if (sizeof($argv)==1) {
     $console->run(['download']);
     $console->run(['process']);
     $console->run(['update','--nojson']);
-    //$console->run(['convert-to-json']);
+    //$console->run(['convert-to-json']); //lo omitimos de momento, los archivos son muy grandes
 } else {
     $console->run();
 }
