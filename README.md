@@ -1,13 +1,16 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/codeforspain.svg?style=social?maxAge=2592000)](https://twitter.com/codeforspain)
 
-# ds-organizacion-administrativa
-Historico de tipos impositivos municipales desde 2000 hasta la fecha. Incluye tipos para el cálculo de:
+# ds-impuestos-municipales
 
-- IBI (Impuesto sobre bienes inmuebles)
-- IAE (Impuesto sobre Actividades Económicas)
-- IVTM (Impuesto Vehículos Tracción Mecánica)
-- IIVTNU (Impuesto sobre Incremento sobre el Valor de los Terrenos de Naturaleza Urbana)
-- ICIO - (Impuesto sobre Construcciones, Instalaciones y Obras)
+Histórico de tipos impositivos municipales desde 2000 hasta la fecha. Incluye tipos para el cálculo de:
+
+
+
+    IBI	  		Impuesto sobre Bienes Inmuebles
+    IAE    		Impuesto sobre Actividades Económicas
+    IVTM   		Impuesto Vehículos Tracción Mecánica
+    IIVTNU  	Impuesto sobre el Incremento del Valor de los Terrenos de Naturaleza Urbana
+  	ICIO		Impuesto sobre Construcciones, Instalaciones y Obras      
 
 
 Este dataset es parte del proyecto abierto y colaborativo CodeForSpain. Puedes obtener más información en:
@@ -21,9 +24,9 @@ Este dataset es parte del proyecto abierto y colaborativo CodeForSpain. Puedes o
 
 
 - Fuente: [Oficina Virtual Para la Cooordinación Financiera con las Entidades Locales - MHAP](https://serviciostelematicos.minhap.gob.es/TiposImpositivos/aspx/listado_municipios.aspx)
-- URL: https://serviciostelematicos.minhap.gob.es/TiposImpositivos/aspx/ImpuestosExcel.aspx?provincia=TODAS&anosel=[YYYY] ( donde [YYYY] es el año, (desde 2000 hasta la actualidad))
+- URL: `https://serviciostelematicos.minhap.gob.es/TiposImpositivos/aspx/ImpuestosExcel.aspx?provincia=TODAS&anosel=[YYYY]` donde `YYYY` es el año, (desde 2000 hasta la actualidad))
 - Tipo: Excel (xls) 
-- Datos procesados: [/data/impuestos_municipales.json](data/impuestos_municipales.json) | [/data/impuestos_municipales.csv](data/impuestos_municipales.csv) 
+- Datos procesados: [/data/impuestos_municipales.csv](data/impuestos_municipales.csv) 
  
 Este recurso ofrece un histórico de información impositiva municipal. Es comunicada por parte de los ayuntamientos a la Oficina Virtual Para la Cooordinación Financiera con las Entidades Locales. 
 
@@ -50,11 +53,11 @@ Ejemplo en CSV:
 - Fuente: [Oficina Virtual Para la Cooordinación Financiera con las Entidades Locales - MHAP](https://serviciostelematicos.minhap.gob.es/TiposImpositivos/aspx/listado_municipios.aspx)
 - URL: https://serviciostelematicos.minhap.gob.es/TiposImpositivos/aspx/ImpuestosExcel.aspx?provincia=TODAS&anosel=2012
 - Tipo: Excel (xls) 
-- Datos procesados: [/data/ibi_2012-rd_20_2011.json](data/ibi_2012-rd_20_2011.json) | [/data/ibi_2012-rd_20_2011.csv](data/ibi_2012-rd_20_2011.csv) 
+- Datos procesados: [/data/ibi_2012-rd_20_2011.csv](data/ibi_2012-rd_20_2011.csv) 
  
 El [Artículo 8  del Real Decreto-ley 20/2011, de 30 de diciembre, de medidas urgentes en materia presupuestaria, tributaria y financiera para la corrección del déficit público](http://noticias.juridicas.com/base_datos/Fiscal/rdl20-2011.html#art_8) establece que para los años 2012 y 2013 los tipos de gravamen del Impuesto sobre Bienes Inmuebles urbano serán modificados al alza siguiendo un procedimiento descrito en el propio artículo. 
 
-Para el año 2012, este valor ya modificado este proporcionado por la fuente en una nueva columna. Para 2013, esta columna desaparece. Cabe esperar que sustituya a la columna `ibi_urbana` (pendiente de comprobar). 
+Para el año 2012, este valor ya modificado es proporcionado por la fuente e incluido en una nueva columna. Para 2013, esta columna no está presente. Cabe esperar que sustituya a la columna `ibi_urbana` (pendiente de comprobar). 
 
 Se ha optado por incluirlo como un recurso separado, pues el dato es solo relevante al año 2012.
 

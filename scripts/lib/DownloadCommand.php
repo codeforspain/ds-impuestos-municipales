@@ -8,7 +8,7 @@ require_once('Config.php');
  */
 class DownloadCommand extends ConsoleKit\Command
 {
-    /*
+    /**
      * Overriding para que invoque all por defecto.
      */
     public function execute(array $args, array $options = array())
@@ -51,6 +51,12 @@ class DownloadCommand extends ConsoleKit\Command
         $this->downloadYear($args['0'],$options);
     }
 
+    /**
+     * Descarga archivo fuente especificado por año
+     *
+     * @param year año a descargar
+     * @opt force fuerza la descarga de los ficheros fuente aunque ya existan
+     */
     private function downloadYear($year,$options=array())
     {
         $url=sprintf(Config::MUNCIPIOS_URL,$year);
