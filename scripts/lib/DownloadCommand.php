@@ -51,6 +51,7 @@ class DownloadCommand extends ConsoleKit\Command
         $this->downloadYear($args['0'],$options);
     }
 
+
     /**
      * Descarga archivo fuente especificado por año
      *
@@ -59,12 +60,16 @@ class DownloadCommand extends ConsoleKit\Command
      */
     private function downloadYear($year,$options=array())
     {
+;
+
         $url=sprintf(Config::MUNCIPIOS_URL,$year);
         $fileName = sprintf(Config::MUNICIPIOS_SOURCE_FILE, $year);
 
         $destFileNameFull = BASE_PATH . DS . Config::ARCHIVE_FOLDER . DS . $fileName;
 
         if (!file_exists($destFileNameFull) || isset($options['force']) || isset($options['f'])){
+            $box = new ConsoleKit\Widgets\Box($this->getConsole(), "Descargando Año - {$year}");
+            $box->write();$this->getConsole()->writeln("");
             file_put_contents($destFileNameFull, fopen($url, 'r'));
         }
 
