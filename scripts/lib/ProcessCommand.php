@@ -116,7 +116,7 @@ class ProcessCommand extends ConsoleKit\Command
                 $domCols = $x_path->query('td[position()!=3]', $domRow);
             }
 
-            $row['municipio_id']=implode('',array_slice(explode("-",trim($domCols->item(0)->nodeValue)),1));
+            $row['municipio_id']=(int) implode('',array_slice(explode("-",trim($domCols->item(0)->nodeValue)),1));
             $row['year']=$year;
 
             $k=1;
@@ -134,8 +134,10 @@ class ProcessCommand extends ConsoleKit\Command
                     continue;
                 }
 
-                if ($columns[$k]['type']=='number') {
-                    $row[$columns[$k]['name']] = trim(str_replace(",", ".", $domCol->nodeValue));
+                if ($columns[$k]['type']=='integer') {
+                    $row[$columns[$k]['name']] = trim(str_replace(",", ".", str_replace(".", "", $domCol->nodeValue)));
+                } else  if ($columns[$k]['type']=='number') {
+                    $row[$columns[$k]['name']] = (float) trim(str_replace(",", ".", str_replace(".", "", $domCol->nodeValue)));
                 } else {
                     $row[$columns[$k]['name']] = trim($domCol->nodeValue);
                 }
@@ -181,9 +183,9 @@ class ProcessCommand extends ConsoleKit\Command
         foreach ($domRows as $domRow) {
             $row=[];
             $domCols = $x_path->query('td[position()=1 or position()=6]',$domRow);
-            $row['municipio_id']=implode('',array_slice(explode("-",trim($domCols->item(0)->nodeValue)),1));
+            $row['municipio_id']=(int) implode('',array_slice(explode("-",trim($domCols->item(0)->nodeValue)),1));
             $row['year']=2012;
-            $row['ibi_urbana_rd_20_2011']=trim(str_replace(",", ".", $domCols->item(1)->nodeValue));
+            $row['ibi_urbana_rd_20_2011']=(float) trim(str_replace(",", ".", $domCols->item(1)->nodeValue));
 
             fputcsv($file, $row);
             $progress->incr();

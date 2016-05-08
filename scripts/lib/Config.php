@@ -45,13 +45,12 @@ class Config
                     "fields"=> [
                         [
                             "name" => "municipio_id",
-                            "type" => "number",
+                            "type" => "integer",
                             "description" => "Código INE del municipio",
-                            "pattern" => "[0-9]{5}"
                         ],
                         [
                             "name" => "year",
-                            "type" => "number",
+                            "type" => "integer",
                             "description" => "Año del dato",
                         ],
                         [
@@ -73,7 +72,7 @@ class Config
                         ],*/
                         [
                             "name" => "poblacion",
-                            "type" => "number",
+                            "type" => "integer",
                             "description" => "Número de habitantes",
                         ],
                         [
@@ -89,9 +88,8 @@ class Config
                         ],
                         [
                             "name" => "ibi_rev_catastral",
-                            "type" => "number",
+                            "type" => "integer",
                             "description" => "Año de la última ponencia de valores catastrales del municipios",
-                            "pattern" => "[0-9]{4}"
                         ],
                         [
                             "name" => "ibi_rustica",
@@ -302,7 +300,7 @@ class Config
                         ],
                         [
                             "name" => "fecha_de_alta",
-                            "type" => "number",
+                            "type" => "date",
                             "description" => "Fecha en que se comunica el dato por parte del ayuntamiento en format YYYY-MM-DD",
                         ],
 
@@ -318,7 +316,7 @@ class Config
                     "fields"=> [
                         [
                             "name" => "municipio_id",
-                            "type" => "number",
+                            "type" => "integer",
                             "description" => "Código INE del municipio",
                             "pattern" => "[0-9]{5}"
                         ],
@@ -329,7 +327,7 @@ class Config
                         ],
                         [
                             "name" => "year",
-                            "type" => "number",
+                            "type" => "integer",
                             "description" => "Año del dato",
                         ],
 

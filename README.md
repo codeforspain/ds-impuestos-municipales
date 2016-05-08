@@ -40,11 +40,11 @@ Incluye los siguientes campos:
 
 | Field Name                  | Order | Type (Format) | Description                                                       |
 |-----------------------------|-------|---------------|-------------------------------------------------------------------| 
-| municipio_id                | 1     | number        | Código INE del municipio                                          |
-| year                        | 2     | number        | Año del dato                                                      |
+| municipio_id                | 1     | interger      | Código INE del municipio                                          |
+| year                        | 2     | integer       | Año del dato                                                      |
 | codigo                      | 3     | string        | Código INE (autonomia-provincia-municipio)                        |
 | ayuntamiento                | 4     | string        | Denominación oficial del municipio                                |
-| poblacion                   | 5     | number        | Número de habitantes                                              |
+| poblacion                   | 5     | integer       | Número de habitantes                                              |
 | ibi_urbana                  | 6     | number        | Tipo para el cálculo del IBI en urbana                            |
 | ibi_coef_actualizacion      | 7     | number        | Coeficiente multiplicador para el cálculo del valor catastral     |
 | ibi_rev_catastral           | 8     | number        | Año de la última ponencia de valores catastrales                  |
@@ -86,7 +86,7 @@ Incluye los siguientes campos:
 | iivtnu_tipo_20              | 44    | number        | IIVTNU - Tipo de gravamen hasta 20 años                           |
 | iivtnu_porcentaje_reduccion | 45    | number        | IIVTNU - Porcentaje de reducción  (Art. 107.3 RDL 2/2004)         | 
 | icio_tipo_gravamen          | 46    | number        | ICIO - Tipo de gravamen                                           | 
-| fecha_de_alta               | 47    | string        | Fecha en la que se comunica el dato (YYYY-MM-DD)                  | 
+| fecha_de_alta               | 47    | date          | Fecha en la que se comunica el dato (YYYY-MM-DD)                  | 
 
 
 

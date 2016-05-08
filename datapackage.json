@@ -34,13 +34,12 @@
                 "fields": [
                     {
                         "name": "municipio_id",
-                        "type": "number",
-                        "description": "Código INE del municipio",
-                        "pattern": "[0-9]{5}"
+                        "type": "integer",
+                        "description": "Código INE del municipio"
                     },
                     {
                         "name": "year",
-                        "type": "number",
+                        "type": "integer",
                         "description": "Año del dato"
                     },
                     {
@@ -56,7 +55,7 @@
                     },
                     {
                         "name": "poblacion",
-                        "type": "number",
+                        "type": "integer",
                         "description": "Número de habitantes"
                     },
                     {
@@ -71,9 +70,8 @@
                     },
                     {
                         "name": "ibi_rev_catastral",
-                        "type": "number",
-                        "description": "Año de la última ponencia de valores catastrales del municipios",
-                        "pattern": "[0-9]{4}"
+                        "type": "integer",
+                        "description": "Año de la última ponencia de valores catastrales del municipios"
                     },
                     {
                         "name": "ibi_rustica",
@@ -267,7 +265,7 @@
                     },
                     {
                         "name": "fecha_de_alta",
-                        "type": "number",
+                        "type": "date",
                         "description": "Fecha en que se comunica el dato por parte del ayuntamiento en format YYYY-MM-DD"
                     }
                 ]
@@ -282,7 +280,7 @@
                 "fields": [
                     {
                         "name": "municipio_id",
-                        "type": "number",
+                        "type": "integer",
                         "description": "Código INE del municipio",
                         "pattern": "[0-9]{5}"
                     },
@@ -293,7 +291,7 @@
                     },
                     {
                         "name": "year",
-                        "type": "number",
+                        "type": "integer",
                         "description": "Año del dato"
                     }
                 ]
@@ -301,5 +299,5 @@
         }
     ],
     "last_updated": "2016-05-08 ",
-    "version": "0.1.12"
+    "version": "0.1.15"
 }
