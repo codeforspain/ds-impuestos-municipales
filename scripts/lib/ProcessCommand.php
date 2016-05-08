@@ -124,19 +124,21 @@ class ProcessCommand extends ConsoleKit\Command
                 $k++;
 
                 // Añadimos columna que falta (coef_actualizacion)
-                if ($year<=2013 && $k==5) {
-                    $row[$columns[$k]['name']] = "";
+                if ($year<=2013 && $columns[$k]['name']=="ibi_rev_catastral") {
+                    $row['ibi_rev_catastral'] = "";
                     $k++;
                 }
 
-                if ($year<2004 && $k==7) {
+                if ($year<2004 && $columns[$k]['name']=="ibi_especial") {
                     $row[$columns[$k]['name']] = "";  //establecemos ibi_especial a ""
                     continue;
                 }
 
-                if ($columns[$k]['type']=='integer') {
+                if (empty(trim($domCol->nodeValue))) {
+                    $row[$columns[$k]['name']]="";  //si está vacío, lo dejamos vacío.
+                } else if ($columns[$k]['type']=='integer') {
                     $row[$columns[$k]['name']] = trim(str_replace(",", ".", str_replace(".", "", $domCol->nodeValue)));
-                } else  if ($columns[$k]['type']=='number') {
+                } else if ($columns[$k]['type']=='number') {
                     $row[$columns[$k]['name']] = (float) trim(str_replace(",", ".", str_replace(".", "", $domCol->nodeValue)));
                 } else {
                     $row[$columns[$k]['name']] = trim($domCol->nodeValue);
