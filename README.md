@@ -47,11 +47,11 @@ Incluye los siguientes campos:
 | poblacion                   | 5     | number        | Número de habitantes                                              |
 | ibi_urbana                  | 6     | number        | Tipo para el cálculo del IBI en urbana                            |
 | ibi_coef_actualizacion      | 7     | number        | Coeficiente multiplicador para el cálculo del valor catastral     |
-| ibi_rev_catastral           | 8     | number        | Año de la última ponencia de valores catastrales               s   |
+| ibi_rev_catastral           | 8     | number        | Año de la última ponencia de valores catastrales                  |
 | ibi_rustica                 | 9     | number        | Tipo para el cálculo del IBI en rústica                           |
 | ibi_especial                | 10    | number        | Tipo para el cálculo del IBI en rústica                           |
-| iae_coef_max                | 11    | number        |                                                                   |
-| iae_coef_min                | 12    | number        |                                                                   |
+| iae_coef_max                | 11    | number        | IAE - Coeficiente de situación máximo                             |
+| iae_coef_min                | 12    | number        | IAE - Coeficiente de situación mínimo                             |
 | ivtm_0_8                    | 13    | number        | IVTM - Turismos de menos de 8 CV                                  |
 | ivtm_8_12                   | 14    | number        | IVTM - Turismos de 8 a 11,99 CV                                   |
 | ivtm_12_16                  | 15    | number        | IVTM - Turismos de 12 a 15,99 CV                                  |
@@ -100,7 +100,6 @@ Ejemplo en CSV:
 
 
 ## Tipo Modificado IBI 2012
-
 
 - Fuente: [Oficina Virtual Para la Cooordinación Financiera con las Entidades Locales - MHAP](https://serviciostelematicos.minhap.gob.es/TiposImpositivos/aspx/listado_municipios.aspx)
 - URL: https://serviciostelematicos.minhap.gob.es/TiposImpositivos/aspx/ImpuestosExcel.aspx?provincia=TODAS&anosel=2012

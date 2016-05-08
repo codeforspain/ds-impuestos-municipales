@@ -40,7 +40,7 @@ class Config
                 "name" => "ds_im_municipios",
                 "title"=> "Información Impositiva Municipal",
                 "format"=> "csv",
-                "path"=> "data/municipios.csv",
+                "path"=> "data/impuestos_municipales.csv",
                 "schema"=> [
                     "fields"=> [
                         [
@@ -108,12 +108,12 @@ class Config
                         [
                             "name" => "iae_coef_max",
                             "type" => "number",
-                            "description" => "",
+                            "description" => "IAE - Coeficiente de situación máximo",
                         ],
                         [
                             "name" => "iae_coef_min",
                             "type" => "number",
-                            "description" => "",
+                            "description" => "IAE - Coeficiente de situación mínimo",
                         ],
 
                         // Turismos
@@ -313,7 +313,7 @@ class Config
                 "name" => "ds_im_ibi_2012",
                 "title"=> "Tipo Modificado del IBI Municipal para el año 2012",
                 "format"=> "csv",
-                "path"=> "data/ibi_modificado_2012",
+                "path"=> "data/ibi_2012-rd_20_2011.csv",
                 "schema"=> [
                     "fields"=> [
                         [
