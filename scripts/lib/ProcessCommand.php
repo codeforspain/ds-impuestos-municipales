@@ -124,8 +124,8 @@ class ProcessCommand extends ConsoleKit\Command
                 $k++;
 
                 // Añadimos columna que falta (coef_actualizacion)
-                if ($year<=2013 && $columns[$k]['name']=="ibi_rev_catastral") {
-                    $row['ibi_rev_catastral'] = "";
+                if ($year<=2013 && $columns[$k]['name']=="ibi_coef_actualizacion") {
+                    $row['ibi_coef_actualizacion'] = "";
                     $k++;
                 }
 
