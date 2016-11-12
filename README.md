@@ -19,6 +19,9 @@ Este dataset es parte del proyecto abierto y colaborativo CodeForSpain. Puedes o
 - Twitter: [@codeforspain](https://twitter.com/codeforspain)
 - Web: [www.codeforspain.org](http://www.codeforspain.org)
 
+>:warning: **Aviso: Estos datos no son demasiado fiables**. Los aprueban cada año los Ayuntamientos, y se introducen de forma manual. La tasa de errores es considerable, por lo que no se recomienda su uso para aplicaciones críticas.
+
+Un ejemplo del uso de estos datos se puede encontrar en la web [Foro- Ciudad.com](http://www.foro-ciudad.com/). No es conveniente confiar en los resultados de su [Simulador de Plusvalía Municipal](http://www.foro-ciudad.com/plusvalia-municipal.php).
 
 ## Impuestos Municipales
 
