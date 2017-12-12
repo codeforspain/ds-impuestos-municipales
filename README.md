@@ -5,8 +5,7 @@
 Histórico de tipos impositivos municipales desde 2000 hasta la fecha. Incluye tipos para el cálculo de:
 
 
-
-    IBI	        Impuesto sobre Bienes Inmuebles
+    IBI    	    Impuesto sobre Bienes Inmuebles
     IAE    	    Impuesto sobre Actividades Económicas
     IVTM        Impuesto Vehículos Tracción Mecánica
     IIVTNU      Impuesto sobre el Incremento del Valor de los Terrenos de Naturaleza Urbana
