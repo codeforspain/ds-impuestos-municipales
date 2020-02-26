@@ -5,7 +5,7 @@ class Config
 
 
 
-    const MUNCIPIOS_URL="https://serviciostelematicos.minhap.gob.es/TiposImpositivos/aspx/ImpuestosExcel.aspx?provincia=TODAS&anosel=%d";
+    const MUNCIPIOS_URL="https://serviciostelematicosext.hacienda.gob.es/SGFAL/ConsultaTipos/aspx/ImpuestosExcel.aspx?provincia=TODAS&anosel=%d";
     const MUNCIPIOS_YEAR_START = 2000;
     const DATA_FOLDER ="data";
     const ARCHIVE_FOLDER = "archive";
