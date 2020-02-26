@@ -48,7 +48,10 @@ Si se invoca sin subcomandos o argumentos, executa:
             
         update                  Actualiza el archivo datapackage.json
         
-                                        
+            OPTIONS
+            
+                --nojson, -n    Omite los ficheros json en datapackage.json                         
+                                         
         
        
 
